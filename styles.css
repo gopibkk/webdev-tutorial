@@ -1,0 +1,16 @@
+* {
+  font-size: 25px;
+}
+
+.our-paragraph {
+  font-size: 50px;
+}
+
+#google-link {
+  border: 5px solid brown;
+}
+
+ul>li {
+  margin: 15px;
+  padding: 10px;
+}
