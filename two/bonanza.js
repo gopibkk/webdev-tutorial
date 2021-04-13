@@ -34,7 +34,7 @@ const person = {
   isSleeping: true,
 };
 
-console.log(`the person's name is ${person.name} and their age is ${person.age}`);
+console.log(`the person's name is ${person.name} and their age is ${person['age']}`);
 
 function add(x, y) {
   return x + y;
