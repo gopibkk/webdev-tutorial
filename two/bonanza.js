@@ -1,5 +1,6 @@
-var name = "anthony";
-const age = 35;
+var myName = "anthony";
+let age = 35;
+age = 34;
 const isTeaching = true;
 const isSleeping = false;
 
@@ -11,7 +12,7 @@ if (isTeaching) {
   console.log('No on knows what Anthony is doing...');
 }
 
-if (age >= 30 && name === 'anthony') {
+if (age >= 30 && myName === 'anthony') {
   console.log('Anthony is an old man');
 }
 
