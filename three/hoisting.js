@@ -1,3 +1,10 @@
+console.log(myName);
+var myName = 'anthony';
+console.log(myName);
+
+console.log(myFriend);
+const myFriend = 'pete';
+
 hi();
 
 function hi() {
@@ -5,4 +12,4 @@ function hi() {
 }
 
 hiAgain();
-const hiAgain = () => console.log('hi again!');
+var hiAgain = () => console.log('hi again!');
