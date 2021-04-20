@@ -13,3 +13,12 @@ passByTest(num, person, animal);
 console.log(num);
 console.log(person);
 console.log(animal);
+
+const log = (cb) => {
+  console.log(2);
+  cb();
+}
+
+log(function () {
+  console.log(1);
+});
