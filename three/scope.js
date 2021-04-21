@@ -31,7 +31,7 @@ function test(x) {
   anotherFunction();
 }
 
-test();
+test(55);
 
 /** Do not have access to the variables below due to scoping rules. */
 console.log(x);
