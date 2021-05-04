@@ -17,3 +17,8 @@ console.log(myName.toUpperCase());
 console.log(myName.toLowerCase());
 
 console.log(myName.replace('Ant', 'Mant'));
+
+const sentence = myName + ' is awesome!';
+console.log(sentence);
+const anotherSentence = `${myName} is really really awesome`;
+console.log(anotherSentence);
