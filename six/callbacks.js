@@ -7,6 +7,8 @@ addHello('Anthony', function (message) {
   console.log(message);
 });
 
+setTimeout(() => console.log('2 seconds later'), 2000);
+
 const arrayCallback = (element, index) => {
   console.log(`element: ${element}`);
   console.log(`index: ${index}`);
