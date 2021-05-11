@@ -13,7 +13,7 @@ Array.prototype.realMap = function (cb) {
   const mappedArr = [];
   for (let i = 0; i < this.length; i++) {
     const element = this[i];
-    mappedArr.push(multiplyByTwo(element));
+    mappedArr.push(cb(element));
   }
   return mappedArr;
 }
