@@ -4,8 +4,9 @@ const tasks = [
   'sleep',
 ];
 
+const pTag = document.getElementById('text');
+
 setTimeout(() => {
-  const pTag = document.getElementById('text');
   pTag.innerText = 'Changed!';
   pTag.classList.add('green');
 
@@ -15,3 +16,7 @@ setTimeout(() => {
     document.querySelector('#tasks').appendChild(li);
   });
 }, 1000);
+
+pTag.addEventListener('click', () => {
+  console.log('hello!');
+});
