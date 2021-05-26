@@ -15,7 +15,7 @@ setTimeout(() => {
     li.textContent = task;
     document.querySelector('#tasks').appendChild(li);
   });
-}, 1000);
+}, 5000);
 
 pTag.addEventListener('click', () => {
   console.log('hello!');

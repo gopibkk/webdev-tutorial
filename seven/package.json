@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node something.js",
     "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
   "devDependencies": {
     "jest": "^27.0.1"
   }
