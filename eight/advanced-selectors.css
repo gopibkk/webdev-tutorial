@@ -1,0 +1,29 @@
+* {
+  background-color: lightblue;
+  font-size: xx-large;
+}
+
+a[title] {
+  margin: 0 10px;
+}
+
+a[href="https://www.google.com"] {
+  border: solid;
+}
+
+p {
+  font-size: x-large;
+}
+
+.green {
+  background-color: green;
+}
+
+#dragons {
+  background-color: white;
+}
+
+.container {
+  margin: 10px;
+  padding: 10px;
+}
