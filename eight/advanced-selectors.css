@@ -15,12 +15,16 @@ p {
   font-size: x-large;
 }
 
-.green {
+.green, a {
   background-color: green;
 }
 
 #dragons {
   background-color: white;
+}
+
+ul li {
+  border: thin solid black;
 }
 
 .container {
