@@ -9,8 +9,6 @@ header, footer {
   grid-column: 1 / span 2;
 }
 
-/* Demo Specific Styles */
-
 body {
   margin: 0 auto;
   max-width: 56em;
