@@ -19,7 +19,7 @@ function callbackHell() {
   }, 500);
 }
 
-// callbackHell();
+callbackHell();
 
 function fun() {
   setTimeout(() => {
@@ -42,4 +42,4 @@ function fun() {
   }, 500);
 }
 
-fun();
+// fun();
