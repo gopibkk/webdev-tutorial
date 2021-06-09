@@ -57,7 +57,8 @@ one()
   .then(three)
   .then(four)
   .then(five)
-  .then(six);
+  .then(six)
+  .then(() => console.log('promise.all complete'));
 
 // Promise.all([one(), two(), three(), four(), five(), six()])
 //   .then(() => console.log('promise.all complete'));

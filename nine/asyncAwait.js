@@ -1,11 +1,9 @@
-function one() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      console.log(1);
-      resolve();
-    }, 500);
-  })
-}
+one = () => new Promise((resolve) => {
+  setTimeout(() => {
+    console.log(1);
+    resolve();
+  }, 500);
+});
 
 function two() {
   return new Promise((resolve) => {
@@ -53,12 +51,13 @@ function six() {
 }
 
 const run = async () => {
-  await one();
-  await two();
-  await three();
-  await four();
-  await five();
-  await six();
+  // await one();
+  // await two();
+  // await three();
+  // await four();
+  // await five();
+  // await six();
+  await Promise.all([one(), two(), three()]);
 };
 
 run();
