@@ -27,6 +27,10 @@ function add(...params) {
   return sum;
 }
 
+const anotherAdd = (x, y, z) => x + y + z;
+
 console.log(add(1, 2, 3));
 console.log(add(1));
 console.log(add(1, 2, 3, 4, 5, 6, 7, 8));
+
+console.log(anotherAdd(...[3, 4, 5]));
