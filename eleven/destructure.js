@@ -1,8 +1,10 @@
 // Different way to access elements from an array
 const food = ['pizza', 'burger', 'fries', 'ice cream'];
-const [pizza, , , iceCream] = food;
+const pizza = food[0];
 console.log(pizza);
-console.log(iceCream);
+const [p, , , i] = food;
+console.log(p);
+console.log(i);
 
 // Different way to access elements from an object
 const person = {
@@ -20,15 +22,21 @@ const person = {
     }
   }
 };
+const person2 = {
+  name: 'Bruno'
+};
 
 const { age } = person;
 const { name: myName } = person;
-console.log(age);
 
+console.log(age);
 console.log(myName);
+
+console.log(person.education.highSchool.name);
 
 const { education: { highSchool: { name: highSchoolName } } } = person;
 console.log(highSchoolName);
 
 const sayHello = ({ name }) => console.log(`Hello from ${name}`);
 sayHello(person);
+sayHello(person2);

@@ -7,13 +7,16 @@ function run(a) {
   console.log(a);
   console.log(myName);
   var b = 2;
+  let c = 3;
   console.log(b)
+  console.log(c);
 }
 
 run(1);
 
 // console.log(a);
 // console.log(b);
+// console.log(c);
 
 const dontChangeMe = 100;
 // dontChangeMe = 99;

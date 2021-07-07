@@ -1,11 +1,11 @@
 const myName = 'Anthony';
-const sentence = 'This is a sentenct about ' + myName + ' he is ' + getAge() + ' years old';
+const sentence = 'This is a sentence about ' + myName + ' he is ' + getAge(1) + ' years old';
 
-function getAge() {
-  return 99;
+function getAge(x) {
+  return 99 + x;
 }
 
 console.log(sentence);
 
-const literalSentence = `This is a sentenct about ${myName} he is ${getAge()} years old`;
+const literalSentence = `This is a sentence about ${myName} he is ${getAge(1)} years old`;
 console.log(literalSentence);
