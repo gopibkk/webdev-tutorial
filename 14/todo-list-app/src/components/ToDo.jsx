@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const ToDo = () => {
   const [toDos, setToDos] = useState([]);
   const [newToDoText, setNewToDoText] = useState('');
+
+  useEffect(() => {
+    document.title = `Num of todos ${toDos.length}`;
+  }, [toDos]);
 
   const onChangeHandler = (event) => {
     if (event.target.name === 'newToDoText') {
