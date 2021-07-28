@@ -29,20 +29,26 @@ const ToDo = () => {
     <>
       <h1>Welcome to the todo list application!</h1>
       <form onSubmit={onSubmitHandler}>
-        <input
-          type="text"
-          name="newToDoText"
-          value={newToDoText}
-          onChange={onChangeHandler} />
-        <button type="submit">Create ToDo!</button>
+        <div className="mb-3">
+          <label for="newToDoText" className="form-label">ToDo text</label>
+          <input
+            type="text"
+            className="form-control"
+            id="newToDoText"
+            aria-describedby="emailHelp"
+            name="newToDoText"
+            value={newToDoText}
+            onChange={onChangeHandler} />
+        </div>
+        <button type="submit" className="btn btn-primary">Submit</button>
       </form>
       {toDos.length <= 0
         ? <p>Add todos to see your list</p>
         : (
-          <ul>
+          <ul className="list-group">
             {toDos.map((todo, index) => {
               return (
-                <li key={index}>{todo}</li>
+                <li className="list-group-item" key={index}>{todo}</li>
               )
             })}
           </ul>

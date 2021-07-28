@@ -2,7 +2,9 @@ import ToDo from "./components/ToDo";
 
 function App() {
   return (
-    <ToDo />
+    <div className="container-fluid">
+      <ToDo />
+    </div>
   );
 }
 
