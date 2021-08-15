@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import Gif from "./Gif";
 
 const Gifs = ({
@@ -5,6 +7,12 @@ const Gifs = ({
   removeFavorite,
   saveFavorite,
 }) => {
+  useEffect(() => {
+    return () => {
+      console.log('I only run when I am removed from the DOM');
+    }
+  }, []);
+
   return gifs.map((gif) => (
     <Gif
       key={gif.id}

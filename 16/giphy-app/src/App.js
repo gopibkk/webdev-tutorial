@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+
+import API from './utils/API';
 
 import Gifs from './components/Gifs';
 import SearchGif from './components/SearchGif';
@@ -9,15 +10,27 @@ function App() {
   const [favoriteGifs, setFavoriteGifs] = useState([]);
 
   useEffect(() => {
+    console.log('I only run onload!');
+
     const getTrendingGifs = async () => {
-      const response = await axios.get('https://api.giphy.com/v1/gifs/trending?api_key=r9lryrT1sb53mewKob2973KLcJiNh1bO');
-      setGifs(response.data.data);
+      const response = await API.getTrendingGifs();
+      setGifs(response.data);
     }
     getTrendingGifs();
   }, []);
 
+  useEffect(() => {
+    console.log('I run on every state update and onload!');
+    console.log(`Trending/searched gifs length: ${gifs.length}`);
+  });
+
+  useEffect(() => {
+    console.log('I run only on a specific state update and onload');
+    console.log(`Favorite gifs length: ${favoriteGifs.length}`);
+  }, [favoriteGifs]);
+
   const searchGifs = async (searchText) => {
-    const response = await axios.get(`https://api.giphy.com/v1/gifs/search?api_key=r9lryrT1sb53mewKob2973KLcJiNh1bO&q=${searchText}`);
+    const response = await API.searchGifs(searchText);
     setGifs(response.data.data);
   }
 

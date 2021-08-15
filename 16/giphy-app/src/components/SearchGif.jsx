@@ -19,7 +19,7 @@ const SearchGif = ({
     <div>
       <form onSubmit={onSubmitHandler}>
         <div className="form-group">
-          <label for="searchGiphyText">Giphy API search term</label>
+          <label htmlFor="searchGiphyText">Giphy API search term</label>
           <input
             type="text"
             className="form-control"
