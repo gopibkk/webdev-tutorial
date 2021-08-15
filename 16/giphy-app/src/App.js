@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import Gif from './components/Gif';
+import Gifs from './components/Gifs';
 import SearchGif from './components/SearchGif';
 
 function App() {
@@ -26,30 +26,46 @@ function App() {
     setFavoriteGifs([...favoriteGifs, favGif]);
   }
 
+  const removeFavorite = (gifId) => {
+    const newFavoriteGifs = favoriteGifs.filter(gif => gif.id !== gifId);
+    setFavoriteGifs(newFavoriteGifs);
+  }
+
   return (
-    <>
-      <h1>Giphy App!</h1>
-      <SearchGif searchGifs={searchGifs} />
-      <p>Favorite gifs</p>
-      {favoriteGifs.map((gif) => (
-        <Gif
-          key={gif.id}
-          imageUrl={gif.images.fixed_height.url}
-          title={gif.images.title} />
-      ))}
-      <p>Trending or searched gifs</p>
-      {gifs.map((gif) => (
-        <Gif
-          key={gif.id}
-          imageUrl={gif.images.fixed_height.url}
-          title={gif.images.title}
-          id={gif.id}
-          saveFavorite={saveFavorite} />
-      ))}
-      {/* component to capture the search form
-      component to render all the trending gifs
-      component to render the favorite gifs */}
-    </>
+    <div className="bg-light">
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <h1>Giphy App!</h1>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <SearchGif searchGifs={searchGifs} />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <h2>Favorite gifs</h2>
+          </div>
+        </div>
+        {favoriteGifs.length <= 0 ? (
+          <div className="row">
+            <div className="col">
+              <p>Click one of the gifs below to save to your favorites!</p>
+            </div>
+          </div>
+        ) : (
+          <Gifs gifs={favoriteGifs} removeFavorite={removeFavorite} />
+        )}
+        <div className="row">
+          <div className="col">
+            <h2>Trending or Searched Gifs</h2>
+          </div>
+        </div>
+        <Gifs gifs={gifs} saveFavorite={saveFavorite} />
+      </div>
+    </div>
   );
 }
 

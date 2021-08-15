@@ -16,14 +16,20 @@ const SearchGif = ({
   }
 
   return (
-    <form onSubmit={onSubmitHandler}>
-      <input
-        type="text"
-        name="searchText"
-        value={searchText}
-        onChange={onChangeHandler} />
-      <button type="submit">Search!</button>
-    </form>
+    <div>
+      <form onSubmit={onSubmitHandler}>
+        <div className="form-group">
+          <label for="searchGiphyText">Giphy API search term</label>
+          <input
+            type="text"
+            className="form-control"
+            id="searchGiphyText"
+            placeholder="Text"
+            value={searchText}
+            onChange={onChangeHandler} />
+        </div>
+      </form>
+    </div>
   )
 }
 
