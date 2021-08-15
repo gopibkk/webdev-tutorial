@@ -31,7 +31,7 @@ function App() {
 
   const searchGifs = async (searchText) => {
     const response = await API.searchGifs(searchText);
-    setGifs(response.data.data);
+    setGifs(response.data);
   }
 
   const saveFavorite = (gifId) => {
