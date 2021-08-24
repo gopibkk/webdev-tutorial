@@ -7,7 +7,7 @@ import {
 
 import API from './utils/API';
 
-import Navbar from './components/Navbar';
+import MyNavbar from './components/MyNavbar';
 import Home from './pages/Home';
 import Favorites from './pages/Favorites';
 import NotFound from './pages/NotFound';
@@ -55,7 +55,7 @@ function App() {
     <Router>
       <div className="bg-light">
         <div className="container">
-          <Navbar />
+          <MyNavbar />
           <Switch>
             <Route exact path="/">
               <Home gifs={gifs} saveFavorite={saveFavorite} searchGifs={searchGifs} />
