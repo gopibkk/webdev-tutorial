@@ -1,6 +1,12 @@
+import { useBankContext } from "../utils/BankContext";
+
 const Data = () => {
+  const { bank } = useBankContext();
+
   return (
-    <p>DATA!!!</p>
+    <div>
+      {JSON.stringify(bank, null, 2)}
+    </div>
   )
 };
 
