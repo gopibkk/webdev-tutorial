@@ -1,4 +1,4 @@
 # Week 18 Agenda
-- Global scope
+- Global state
 - Context Api
 - Build bad bank

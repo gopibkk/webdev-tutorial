@@ -18,6 +18,13 @@ export const BankProvider = ({ children }) => {
     ]
   });
 
+  const setLoggedInUser = (username) => {
+    setBank({
+      ...bank,
+      loggedInUser: username,
+    });
+  }
+
   const addUser = (user) => {
     setBank({
       ...bank,
@@ -26,9 +33,11 @@ export const BankProvider = ({ children }) => {
   }
 
   return (
-    <BankContext.Provider
-      value={{ bank, addUser }}
-    >
+    <BankContext.Provider value={{
+      bank,
+      addUser,
+      setLoggedInUser,
+    }}>
       {children}
     </BankContext.Provider>
   );
